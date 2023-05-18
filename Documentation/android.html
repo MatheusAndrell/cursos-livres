@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CoreUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+    <link rel="stylesheet" href="css/backend.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/logos/popup-logo.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+    <title>Android Documentation | Neon LMS App</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .card-body p, .card-body ul {
+            font-size: 1.1em;
+        }
+
+        .card-body li {
+            padding: 5px 0px;
+        }
+
+        ul.common {
+            display: inline-block;
+            padding-left: 0px;
+        }
+
+        ul.common li {
+            float: left;
+            display: inline-block;
+            line-height: 40px;
+            list-style: none none;
+            width: 33%;
+        }
+
+        ul.common li a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        #features .card.bg-primary > .card-body {
+            background: #17b5b4;
+            background: -webkit-gradient(left top, right top, color-stop(0, #4eb3bf), color-stop(100%, #17b5b4), color-stop(100%, #4eb3bf));
+            background: -webkit-gradient(linear, left top, right top, from(#01a6fd), color-stop(100%, #17b5b4), to(#01a6fd));
+            background: linear-gradient(90deg, #01a6fd 0, #17b5b4 100%, #01a6fd);
+        }
+
+        @media screen and (max-width: 768px) {
+            .card img {
+                width: 100% !important;
+            }
+
+            ul.common li {
+                float: none;
+                clear: both;
+                display: block;
+                width: 100%;
+            }
+
+            #features .card img {
+                height: 50px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto !important;
+                clear: both;
+                float: none !important;
+                width: auto !important;
+            }
+
+            #features .card {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body class="app sidebar-lg-show sidebar-fixed header-fixed">
+<header class="app-header navbar">
+    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="images/logos/logo-black-text.png" height="25" alt="Square Logo">
+        <img class="navbar-brand-minimized" src="images/logos/popup-logo.png" height="30" alt="Square Logo">
+    </a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</header>
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#intro">
+                        <i class="nav-icon fa fa-tachometer-alt"></i>Introduction
+                    </a>
+                </li>
+                <li class="nav-title">
+                    Setup Guide
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#appConfiguration">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        App Configuration
+                    </a>
+                </li>
+
+            </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+
+    </div>
+    <main class="main">
+        <div class="container-fluid" style="padding-top: 30px">
+            <div class="animated fadeIn">
+                <div class="content-header">
+                    <div id="intro">
+                        <div class="card">
+                            <div class="card-header"><b>Introduction</b></div>
+                            <div class="card-body">
+                                <p>Neon LMS is a complete package script for setting up online courses and earn by
+                                    enrolling students. The bundle includes responsive frontend website managed by
+                                    full-fledge dashboard for Admin, Teachers and Students. Admin can manage every
+                                    aspect of the system while Teacher can create multiple courses with Lessons and
+                                    Tests. User can browse through this list and can enroll as student by paying for the
+                                    course and educate themselves anytime and from anywhere.</p>
+
+                                <p>So what you're waiting for? <a class="link" href="#appConfiguration">Setup Neon LMS</a>
+                                    and start earning by sharing knowledge.</p>
+                                <p> <a class="btn btn-warning btn-lg font-weight-bold" href="https://documenter.getpostman.com/view/5183624/SW18uZwk?version=latest" target="_blank">Checkout API Guideline</a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="appConfiguration">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>App Configuration</b>
+                            </div>
+                            <div class="card-body">
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 1</h4>
+                                    <p>Download [or] Clone the latest and updated source code of Neon Lms. User Android
+                                        application Source Code from zip to your project root folder.</p>
+                                </div>
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 2</h4>
+                                    <p>Open your Android Studio. From File options On the top left corner, Choose Import
+                                        ---> Import Project option.</p>
+                                    <img src="images/app-steps/step2.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 3</h4>
+                                    <p>A Selection dialog will open. Choose the path from where the project is
+                                        located.</p>
+                                    <img src="images/app-steps/step3.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 4</h4>
+                                    <p>After the project got imported, In the project window, you can customize the
+                                        files what you viewed. Select Android from the dropdown menu on the left corner,
+                                        to view all necessary files that you need in your project.</p>
+                                    <img src="images/app-steps/step4.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 5</h4>
+                                    <p>Under Gradle Scripts ---> Select the app’s <b>build.gradle</b> file.</p>
+                                    <img src="images/app-steps/step5.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 6</h4>
+                                    <p>On app level gradle file replace the <b>applicationId</b> with your package name and sync the project.</p>
+                                    <img src="images/app-steps/step6.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 7</h4>
+                                    <p>To get <b>google_services.json</b> file Sign in to your account on <a href="https://console.firebase.google.com/" class="font-weight-bold" target="_blank" >Firebase</a> and select Add Project with your Application Name(If Not Exist) and select your country.</p>
+                                    <img class="mb-3" src="images/app-steps/step7-1.png">
+                                    <img  class="mb-3" src="images/app-steps/step7-2.png">
+                                    <img src="images/app-steps/step7-3.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 8</h4>
+                                    <p>Inside your project you can register your android app with your package name, app name(optional) and your own(Android Studio) SHA-1 key.</p>
+                                    <img src="images/app-steps/step8.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 9</h4>
+                                    <p><b>After registering App</b> you can see google-service.json <b>file in another popup.</b></p>
+                                    <img src="images/app-steps/step9.png">
+                                    <p>Now Download the <b>google-service.json</b> file from your console and finish the steps of app creation and replace that <b>google-service.json</b> on android studio. Then sync project at android studio.</p>
+                                    <p class="text-danger font-weight-bold">
+                                    Note : You can download google-service.json file from your console at any time.</p>
+                                    <p>
+                                    To do that select Settings option by clicking menu icon of your app(Which you created already).</p>
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 10</h4>
+                                    <p>Select Compact Empty middle packages option by clicking gear icon from android studio’s left top corner.</p>
+                                    <img src="images/app-steps/step10.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 11</h4>
+                                    <p>Now you can Rename the package name by right click on the package name -> refactor -> Rename.(Shift+F6).</p>
+                                    <img src="images/app-steps/step11.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 12</h4>
+                                    <p>Open Config,java class from Constants package and change BASE_URL, CLIENT_SECRET_KEY and STRIPE_TOKEN with your installation credentials.</p>
+                                    <img src="images/app-steps/step12.png">
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 13</h4>
+                                    <p>On your root folder Go to app -> src -> main -> res</p>
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 14</h4>
+                                    <p>Change image files from drawable and mipmap folders of res directory to your project’s relevant images.</p>
+                                    <img src="images/app-steps/step14.png">
+
+                                </div>
+
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 15</h4>
+                                    <p>At res directory, Change app_name and facebook_app_id ,fb_login_protocol_scheme,at strings.xml file of values package.</p>
+                                    <img src="images/app-steps/step15.png">
+
+                                </div>
+                                <div class="steps-wrapper mb-5">
+                                    <h4 class="font-weight-bold">Step 16</h4>
+                                    <p>To change the theme color, use <b>colors.xml</b> file.</p>
+                                    <img src="images/app-steps/step16.png">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div><!--content-header-->
+            </div><!--animated-->
+        </div><!--container-fluid-->
+    </main><!--main-->
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+<script>
+    $(document).on('click', '.nav-link, .link', function (e) {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active')
+        var target = $($(this).attr('href'))
+        $('html, body').animate({
+            scrollTop: target.offset().top - 76
+        }, 10);
+    });
+</script>
+</body>
+</html>

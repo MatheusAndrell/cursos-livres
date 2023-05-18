@@ -1,0 +1,1733 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CoreUI CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/@coreui/coreui/dist/css/coreui.min.css">
+    <link rel="stylesheet" href="css/backend.css">
+
+    <link rel="shortcut icon" type="image/x-icon" href="images/logos/popup-logo.png"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+    <title>Documentation | Neon LMS</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .card-body p, .card-body ul {
+            font-size: 1.1em;
+        }
+
+        .card-body li {
+            padding: 5px 0px;
+        }
+
+        ul.common {
+            display: inline-block;
+            padding-left: 0px;
+        }
+
+        ul.common li {
+            float: left;
+            display: inline-block;
+            line-height: 40px;
+            list-style: none none;
+            width: 33%;
+        }
+
+        ul.common li a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        #features .card.bg-primary > .card-body {
+            background: #17b5b4;
+            background: -webkit-gradient(left top, right top, color-stop(0, #4eb3bf), color-stop(100%, #17b5b4), color-stop(100%, #4eb3bf));
+            background: -webkit-gradient(linear, left top, right top, from(#01a6fd), color-stop(100%, #17b5b4), to(#01a6fd));
+            background: linear-gradient(90deg, #01a6fd 0, #17b5b4 100%, #01a6fd);
+        }
+
+        @media screen and (max-width: 768px) {
+            .card img {
+                width: 100% !important;
+            }
+
+            ul.common li {
+                float: none;
+                clear: both;
+                display: block;
+                width: 100%;
+            }
+
+            #features .card img {
+                height: 50px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto !important;
+                clear: both;
+                float: none !important;
+                width: auto !important;
+            }
+
+            #features .card {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body class="app sidebar-lg-show sidebar-fixed header-fixed">
+<header class="app-header navbar">
+    <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="images/logos/logo-black-text.png" height="25" alt="Square Logo">
+        <img class="navbar-brand-minimized" src="images/logos/popup-logo.png" height="30" alt="Square Logo">
+    </a>
+    <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+</header>
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav" id="nav">
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#intro">
+                        <i class="nav-icon fa fa-tachometer-alt"></i>Introduction
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#upgrade_guide">
+                        <i class="nav-icon fa fa-tachometer-alt"></i>Upgrade Guide
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#features">
+                        <i class="nav-icon fa fa-gifts"></i>Features
+                    </a>
+                </li>
+                <li class="nav-title">
+                    Setup Guide
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#installation">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Installation
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#mail_configuration">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Mail Setup
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#payment_configuration">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Payment Setup
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#zoom_setup">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Zoom Setup
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#subscription">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Subscription
+                    </a>
+                </li>
+                <li class="nav-title">
+                    Features Guide
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#dashboard">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#orders">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Orders
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#teachers">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Teachers
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#categories">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Categories
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#course_management">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Course Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#bundles">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Bundles
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#reports">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Reports
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#site_management">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Site Management
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#messaging">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Messaging
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#leads">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Leads
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#coupons">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Coupons
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#tax">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Tax
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#payment_request">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Payment Requests
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#account">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#access">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Access
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#settings">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Settings
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#debug_site">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Debug Site
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#translation_manager">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Translation Manager
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#backup">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Backup
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#update">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Update
+                    </a>
+                </li>
+                <li class="nav-title">
+                    Conclusion
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="#credits">
+                        <i class="nav-icon fa fa-angle-double-right"></i>
+                        Credits
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+
+    </div>
+    <main class="main">
+        <div class="container-fluid" style="padding-top: 30px">
+            <div class="animated fadeIn">
+                <div class="content-header">
+                    <div id="intro">
+                        <div class="card">
+                            <div class="card-header"><b>Introduction</b></div>
+                            <div class="card-body">
+                                <p>Neon LMS is a complete package script for setting up online courses and earn by enrolling students. The bundle includes responsive frontend website managed by full-fledge dashboard for Admin, Teachers and Students. Admin can manage every aspect of the system while Teacher can create multiple courses with Lessons and Tests. User can browse through this list and can enroll as student by paying for the course and educate themselves anytime and from anywhere.</p>
+
+                                <p>So what you're waiting for? <a class="link" href="#installation">Setup Neon LMS</a> and start earning by sharing knowledge.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="upgrade_guide">
+                        <div class="card">
+                            <div class="card-header"><b>Version 5.4.5 Upgrade Guide</b></div>
+                            <div class="card-body">
+                                <h5 class="text-info">What's Updated?</h5>
+								<ul>
+									<li>New Feature Added - <strong>Community Forums</strong></li>
+									<ul>
+										<li class="font-weight-bold">How it helps students and instructors?:</li>
+										<ol>
+											<li>Students react to content, share challenges, teach each other, learn by stating and understanding, clarify assumptions, experiment, and own new skills, and ideas.</li>
+											<li>Instructors can invite students to participate in an online discussion, make better engagement, provide assistance, and support students with their doubts.</li>
+										</ol>
+										<li class="font-weight-bold">Administrator Access:</li>
+										<ol>
+											<li>Admin can create/delete/manage categories, Tread, Post and Replies</li>
+											<li>View private categories</li>
+										</ol>
+									</ul>
+									<li class="font-weight-bold">Bug Fixes</li>
+								</ul>
+                                <h5 class="text-primary">How to upgrade?</h5>
+                                <ul class="font-weight-bold">
+                                    <li>Download latest update zip on Envato and extract it <span class="form-text text-info">(update_v5.4.5.zip required PHP 8.1 version. If not on a server then don't update the script.)</span></li>
+                                    <li>Replace <strong>.env.example and update .env File. Look into .env.example File</strong></li>
+                                    <li>Replace <strong>app/Http/Controllers/Backend/UpdateController.php</strong></li>
+                                    <li>Now, login to your dashboard as an Admin.</li>
+                                    <li>Upload Zip <strong>(update_v5.4.5.vs zip)</strong></li>
+                                    <li>You will see list of files which will be updated.</li>
+                                    <li>Click on Update button. It will take a while to update.</li>
+                                </ul>
+                                <p class="font-weight-bold text-info">Refer README file inside zip</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="features">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Features</b>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/zoom-meeting.png">
+                                                <p class="mb-0 font-weight-bold">Zoom Meeting</p>
+                                                <div>with course</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/four-layouts.png">
+                                                <p class="mb-0 font-weight-bold">4 Layouts</p>
+                                                <div>for frontend homepage</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/dynamic-top-menu.png">
+                                                <p class="mb-0 font-weight-bold">Dynamic top Menu</p>
+                                                <div>like wordpress</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/custom-logo.png">
+                                                <p class="mb-0 font-weight-bold">Custom Logo</p>
+                                                <div>add logos of your choice</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/dynamic-slider.png">
+                                                <p class="mb-0 font-weight-bold">Dynamic Slider</p>
+                                                <div>with component options</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/section-on-off.png">
+                                                <p class="mb-0 font-weight-bold">Section On / Off</p>
+                                                <div>for all the homepage sections</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/custom-counters.png">
+                                                <p class="mb-0 font-weight-bold">Custom Counters</p>
+                                                <div>for teachers, students and courses</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/manage-sections.png">
+                                                <p class="mb-0 font-weight-bold">Manage Sections</p>
+                                                <div>Why choose us, Testimonials, FAQ etc.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/custom-footer.png">
+
+                                                <p class="mb-0 font-weight-bold">Custom Footer</p>
+                                                <div>Editable footer components
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/get-in-touch.png">
+
+                                                <p class="mb-0 font-weight-bold">Get in Touch</p>
+                                                <div>Embed map and contact details.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/ecommerce.png">
+
+                                                <p class="mb-0 font-weight-bold">ECommerce</p>
+                                                <div>Ready with entire Ecommerce functionality</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/payment-gateways.png">
+
+                                                <p class="mb-0 font-weight-bold">Payment Gateways</p>
+                                                <div>Ready setup with Stripe, PayPal and offline mode</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/languages.png">
+
+                                                <p class="mb-0 font-weight-bold">Languages</p>
+                                                <div>Available in English, Spanish and French</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/invoice-generator.png">
+
+                                                <p class="mb-0 font-weight-bold">Invoice Generator</p>
+                                                <div>Built-in invoice generator for user as well as admin</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/newsletter.png">
+                                                <p class="mb-0 font-weight-bold">Newsletter</p>
+                                                <div>Ready setup with Sendgrid and Mailchimp</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/messaging-service.png">
+                                                <p class="mb-0 font-weight-bold">Messaging Service</p>
+                                                <div>For easy teacher - students communication</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/dashboard.png">
+
+                                                <p class="mb-0 font-weight-bold">Dashboard</p>
+                                                <div>Featured dashboard for all roles</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/orders.png">
+
+                                                <p class="mb-0 font-weight-bold">Orders</p>
+                                                <div>Manage and complete orders manually</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/pages-manager.png">
+
+                                                <p class="mb-0 font-weight-bold">Pages Manager</p>
+                                                <div>
+                                                    Create and manage custom pages of theme
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/blog.png">
+                                                <p class="mb-0 font-weight-bold">Blog</p>
+                                                <div>
+                                                    Create and manage blog for you website
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/contact-request.png">
+
+                                                <p class="mb-0 font-weight-bold">Contact Request</p>
+                                                <div>
+                                                    View all contact queries in dashboard
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/role-management.png">
+
+                                                <p class="mb-0 font-weight-bold">Role Management</p>
+                                                <div>
+                                                    Manage users and its roles and permissions
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/settings.png">
+
+                                                <p class="mb-0 font-weight-bold"> Settings</p>
+                                                <div>
+                                                    Settings manager with advance features
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/social-login.png">
+
+                                                <p class="mb-0 font-weight-bold"> Social Login</p>
+                                                <div>
+                                                    With google, facebook and twitter
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/site-debugger.png">
+
+                                                <p class="mb-0 font-weight-bold"> Site Debugger</p>
+                                                <div>
+                                                    Keep eye on your site. Check what went wrong
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/translation.png">
+
+                                                <p class="mb-0 font-weight-bold">Translation</p>
+                                                <div>
+                                                    Create and manage language files
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/theme-color.png">
+
+                                                <p class="mb-0 font-weight-bold"> Theme Color</p>
+                                                <div>
+                                                    Change theme colors from dashboard
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/course-manager.png">
+
+                                                <p class="mb-0 font-weight-bold"> Course Manager</p>
+                                                <div>
+                                                    Add and manage course, lesson, test, questions
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/menu-manager.png">
+
+                                                <p class="mb-0 font-weight-bold"> Menu Manager</p>
+                                                <div>
+                                                    Manage menus with custom links and pages
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/rtl-support.png">
+
+                                                <p class="mb-0 font-weight-bold"> RTL Support</p>
+                                                <div>
+                                                    Clean and dedicated RTL support.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/multiple-currencies.png">
+
+                                                <p class="mb-0 font-weight-bold"> Multiple Currencies</p>
+                                                <div>
+                                                    Switch to major available currencies.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/certification.png">
+
+                                                <p class="mb-0 font-weight-bold"> Certification</p>
+                                                <div>on course completion and verification.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/bundle.png">
+
+                                                <p class="mb-0 font-weight-bold"> Bundles</p>
+                                                <div>
+                                                    Sale multiple courses by creating bundles.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/free-course.png">
+
+                                                <p class="mb-0 font-weight-bold"> Free Course</p>
+                                                <div>
+                                                    Now you can give free course and bundles
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/sitemap-system.png">
+
+                                                <p class="mb-0 font-weight-bold"> Sitemap</p>
+                                                <div>
+                                                    Generate sitemap for Blog, Course and Bundle
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/coupon-system.png">
+
+                                                <p class="mb-0 font-weight-bold"> Coupon System</p>
+                                                <div>
+                                                    Create and manager coupons
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3 col-12">
+                                        <div class="card text-white bg-primary">
+                                            <div class="card-body ">
+                                                <img height="50px" class="float-left mr-2"
+                                                     src="images/features/tax-system.png">
+
+                                                <p class="mb-0 font-weight-bold"> Tax System</p>
+                                                <div>
+                                                    For purchases of Course and Bundles
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="installation">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Installation</b>
+                            </div>
+                            <div class="card-body">
+                                <h5>1. Local Computer</h5>
+                                <ul>
+                                    <li>Install MySql 5.8 and Php8.1</li>
+                                    <li>Unzip <code>Neon LMS.zip</code>.</li>
+                                    <li>Create a database using one of the sql files and extract
+                                        <code>neon-lms-app.zip</code> to a desired location
+                                    </li>
+                                    <li>Go to location, edit .env to update database and other configurations.</li>
+                                    <li>Run <code>php artisan serve</code></li>
+                                    <li>And you are ready to go!</li>
+                                    <li>Go to <a href="http://localhost:8000" rel="noreferrer">localhost:8000 </a> to
+                                        visit your LMS
+                                    </li>
+                                </ul>
+
+                                <h5>2. VPS and Virtual Machine</h5>
+                                <ul>
+                                    <li>Install Nginx, MySql 5.8 and Php8.1</li>
+                                    <li>Unzip <code>Neon LMS.zip</code>.</li>
+                                    <li>Create a database using one of the sql files and extract
+                                        <code>neon-lms-app.zip</code> to a desired location
+                                    </li>
+                                    <li>Configure Nginx to point your domain to <code>location/public</code> directory,
+                                        <a href="https://laravel.com/docs/5.8/deployment#nginx" rel="noreferrer">Read
+                                            More.</a></li>
+                                    <li>Go to location, edit .env to update database and other configurations.</li>
+                                    <li>And you are ready to go!</li>
+                                </ul>
+
+                                <h5>3. Shared Hosting</h5>
+                                <ul>
+                                    <li>MySql 5.8 and Php8.1</li>
+                                    <li>Unzip <code>Neon LMS.zip</code>.</li>
+                                    <li>Create a database using one of the sql files and extract
+                                        <code>neon-lms-app.zip</code> to a desired location
+                                    </li>
+                                    <li>Go to location, edit .env to update database and other configurations.</li>
+                                    <li>In cPanel -> Domains change the root directory of your domain to <code>location/public</code> directory.</li>
+                                    <li>Go to location, edit .env to update database and other configurations.</li>
+                                    <li>And you are ready to go!</li>
+                                    <li>Watch Video
+                                        <div class="pt-2">
+                                            <iframe width="838" height="524" src="https://www.youtube.com/embed/eca-6Y13dVs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        </div>
+                                    </li>
+
+                                </ul>
+                                <h5>Note :</h5>
+                                <ol>
+                                    <li>Default credentials for Login: <br>
+                                        For <b>Admin</b> =>
+                                        Email : <code>admin@lms.com</code>
+                                        Password: <code>secret</code>
+                                        <br>
+                                        For <b>Teacher</b> =>
+                                        Email : <code>teacher@lms.com</code>
+                                        Password: <code>secret</code>
+                                        <br>
+                                        For <b>Student</b> =>
+                                        Email : <code>student@lms.com</code>
+                                        Password: <code>secret</code>
+                                    </li>
+                                    <li>There are various scheduled commands in this script. You have to add following job in your CRON:<br>
+                                        <code> * * * * * cd /path-to-your-project && php artisan schedule:run >> /dev/null 2>&1</code>
+                                    </li>
+                                    <li>
+                                        If you see images not showing, login as admin and click troubleshoot in <code>General</code> settings
+                                    </li>
+
+                                    <li>
+                                        In some shared hosting: symlinks, exec etc might be disabled, enable APP_DEBUG in .env and check for appropriate error.
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mail_configuration">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Mail Setup</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is compulsory to setup for email communication. Otherwise it will create errors.
+                                    To set this up go to
+                                    <code>Dashboard</code> click on <code>Settings</code> and select
+                                    <code>General</code>.<br> Now click on <code>Mail Configuration</code> tab. It will
+                                    look like this:</p>
+                                <img width="100%" src="images/mail-configuration.png">
+
+                                <p class="mt-3">Set up <code>Mail configuration</code> according to your email host and
+                                    read all the instructions written below input boxes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="payment_configuration">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Payment Setup</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is compulsory to setup for payments functionality. Otherwise user will not be
+                                    able to make payments to your products
+                                    <code>Dashboard</code> click on <code>Settings</code> and select
+                                    <code>General</code>.<br> Now click on <code>Payment Configuration</code> tab. It
+                                    will look like this:</p>
+                                <img width="100%" src="images/payment-configuration.png">
+
+                                <p class="mt-3">Set up <code>Payment configuration</code> according to your required
+                                    payment methods and select currency you want to deal with in purchases. Only checked payments methods will be shown on Checkout page. It
+                                    means you can turn on/off all these payment methods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="zoom_setup">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Zoom Setup</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is compulsory to setup for zoom meeting functionality. Otherwise user will not be
+                                    able to make live lesson to your products
+                                    <code>Dashboard</code> click on <code>Settings</code> and select
+                                    <code>Zoom Setting</code>. It
+                                    will look like this:</p>
+                                <img width="100%" src="images/zoom-setting.png" class="mb-4">
+
+                                <h4>How to Get Zoom Credentials?</h4>
+                                <p>1. Go to <a href="https://marketplace.zoom.us/">Zoom Market Place</a>. If you have not zoom account than create new one.</p>
+                                <p>2. Click on <code>Build App</code>.</p>
+                                <img width="100%" src="images/zoom-setting-step-1.png" class="mb-4">
+                                <p>3. Create JWT app type.</p>
+                                <img width="100%" src="images/zoom-setting-step-2.png" class="mb-4">
+                                <p>4. Get API key and API secret.</p>
+                                <img width="100%" src="images/zoom-setting-step-3.png" class="mb-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="subscription">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Subscription</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is compulsory to setup for subscription functionality. Otherwise user will not be able to subscribe plan.</p>
+                                <h4>Step 1 (Stripe Credentials)</h4>
+                                <p>First of need stripe credentials on this functionality. Go to Admin <code>Dashboard</code> click on <code>Settings</code> and select <code>General </code> Now click on <code>Payment Configuration</code> Tab. it will look like this</p>
+                                <img width="100%" src="images/payment-configuration.png">
+                                <hr class="my-4">
+                                <h4 class="mt-4">Step 2 (Stripe Plan)</h4>
+                                <p>This is independent CRUD and it will be provided to Administrator with full access.</p>
+                                <p>Go to Admin <code>Dashboard</code> click on <code>Stripe </code> and select <code>Plans </code>. it will look like this</p>
+                                <p>You can select the Courses/Bundles that you want the users to have access to under this plan</p>
+                                <p>If you don't select particular courses/bundles, then it will allow the user to all the courses/bundles to have access to.</p>
+                                <p>On the front end, user will be able to subscribe to the plan and will be able to purchase that</p>
+                                <img width="100%" src="images/subscription-stripe-plan.png">
+                                <!--<hr class="my-4">
+                                <img width="100%" src="images/subscription-stripe-plan-create.png">-->
+                                <hr class="my-4">
+                                <h4>Step 3 (Add Menu in Menu Manager)</h4>
+                                <p>Go to menu <code>Site Management</code> select <code>Menu Manager</code> and choose <code>nav-menu</code>.</p>
+                                <p>Add new custom link menu with URL <code>subscription/plans</code> and Label <code>Plans(as you wish)</code>.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dashboard">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Dashboard</b>
+                            </div>
+                            <div class="card-body">
+                                <p>There are different dashboard for each role. Following features are added to their
+                                    dashboard according to their role.</p>
+                                <h4>Administrator Dashboard</h4>
+                                <img src="images/admin-dashboard.png" class="mb-4" width="100%">
+                                <h4>Teacher Dashboard</h4>
+                                <img src="images/teacher-dashboard.png" class="mb-4" width="100%">
+                                <br>
+                                <h4>Student Dashboard</h4>
+                                <img src="images/student-dashboard.png" class="mb-4" width="100%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="orders">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Orders</b>
+                            </div>
+                            <div class="card-body">
+                                <p>Administrator can view, delete and manage all the orders in this tab. This menu will
+                                    only be available to Administrator.</p>
+                                <p> Besides managing order, Administrator can also <b>Complete Orders Manually.</b></p>
+                                <p>Manual completion of order occurs when user choses <b>Offline Payment Method.</b>
+                                    Administrator will see
+                                    <button class="btn btn-sm btn-success">Complete Manually</button>
+                                    button and once he clicks this;<br> it will <b>complete order</b> and user will be
+                                    able to see course in his dashboard
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="teachers">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Teachers</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is complete CRUD for teachers's role. Adding teachers is compulsory if you want
+                                    to add their course. Basic required details for Teacher will be First Name, Last
+                                    Name, Email, Image and password.
+                                </p>
+                                <p>So teacher can also login with this credentials and create and manage courses</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="categories">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Categories</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This is independent CRUD and it will be provided to Administrator with full access
+                                    and to teacher with restricted access.<br> Categories will be used to add in <b>Course</b>
+                                    as well as in <b>Blog</b>. Basic requirement to add a Category will be only name and
+                                    you can select icon for the category as it will be displayed in various places of
+                                    theme with icon.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="course_management">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Course Management</b>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-0">This menu will be provided to Administrator with full access and to
+                                    Teacher with restricted access. It consists of four submenus</p>
+                                <ol class="font-weight-bold pl-3">
+                                    <li>Courses</li>
+                                    <li>Lessons</li>
+                                    <li>Tests</li>
+                                    <li>Questions</li>
+                                    <li>Live Lesson</li>
+                                    <li>Live Lesson Slots</li>
+                                </ol>
+                                <hr>
+                                <h4>1. Courses</h4>
+                                <p class="mb-0">The combinations of lessons and tests is a course. Basic flow would be
+                                    like:</p>
+                                <ul>
+                                    <li>Create Course</li>
+                                    <li>Create Lesson for Course</li>
+                                    <li>Add Tests (If required)</li>
+                                    <li>Add Questions for test (If test created)</li>
+                                </ul>
+                                <p>You can also add <code>Meta Title</code>, <code>Meta Description</code>, <code>Meta
+                                    Keywords</code> for better SEO Results.</p>
+                                <p>Free Bundle feature is also available.</p>
+                                <p>You can also add introductory video of Course. You can choose from various options like embed <b>Youtube, Vimeo, Iframe</b> or <b>upload</b> your own.</p>
+
+                                <p>Once you create the course you can click
+                                    <button class="btn btn-primary btn-sm"><i class="fa fa-eye"></i></button>
+                                    and view the course. Here you can manage <b>Course Timeline.</b><br> It will list
+                                    all the lessons and tests related to course, you can drag and move them to arrange
+                                    in a custom order and click on <b>Save Timeline</b>.<br> So when user sees this
+                                    course it will show all course related lesson and tests in that particular sequence.
+                                    Course Timeline will look like this :
+                                </p>
+                                <img class="mb-3" src="images/course-timeline.png">
+                                <div class="clearfix"></div>
+                                <p>As you can see above, you can easily sort course components according to your
+                                    requirements.</p>
+                                <hr>
+
+                                <h4>2. Lessons</h4>
+                                <p>You can add lessons to courses and publish lessons for user. Only published lesson
+                                    will be visible in Course. In Lesson you can add <b>Featured Image, Downloadable
+                                        Files, Videos etc</b>. </p>
+                                <p>You can also show PDF to users. Just upload to <code>Add PDF</code> and it will be displayed on the lesson screen.</p>
+                                <p>You can add Audio to the lesson it will stream in the user side. Just upload to <code>Add Audio</code> and it will be displayed on the lesson screen.</p>
+                                <p><b>How to add videos in lesson?</b><br></p>
+                                <p class="mb-1"><b>Youtube :</b> Go to Youtube -> Go to video you want to display -> click on share button below video. Copy that links and paste in text input </p>
+                                <p class="mb-1"><b>Vimeo :</b> Go to Vimeo -> Go to video you want to display -> click on share button and copy paste video url text input </p>
+                                <p class="mb-1"><b>Upload :</b> Upload <b>mp4</b> file in file input</p>
+                                <p class="mb-1"><b>Embed :</b> Copy / Paste embed code in  text input</p>
+                                <hr>
+                                <h4>3. Tests</h4>
+                                <p>This may contain course to associated with, title and description to be created. And
+                                    it also has <b>Published</b> checkbox, so if user checks it then only it will be
+                                    displayed for students. Otherwise it will be stored as a draft. So Now we need to
+                                    associate Questions with the test.</p>
+                                <hr>
+                                <h4>4. Questions</h4>
+                                <p>You can associate created question with multiple tests. Basically you will need to
+                                    write question and four options. And need to check the checkbox; for which one is
+                                    correct.
+                                    You can also define score for each question differently. Best part is, when user
+                                    gives test; he gets instant result. And if he is not satisfied with his result then
+                                    he can give it again.</p>
+                                <h5>Test associated with Questions will look like this :</h5>
+                                <img src="images/test.png">
+                                <h5 class="mt-4">Result sample will look like this :</h5>
+                                <img src="images/result.png">
+                                <h4>5. Live Lesson</h4>
+                                <p>You can add course with live lessons for user</p>
+                                <h4>6. Live Lesson Slots</h4>
+                                <p>you can add every live lesson with multiple slots.</p>
+                                <ul class="font-weight-bold pl-3">
+                                    <li>Each slot integrate with zoom, so carefully create any slot.</li>
+                                    <li>Slot has max 20 student allow.</li>
+                                </ul>
+                                <h5 class="text-danger">Note: <span class="font-weight-bold">Once create any slot, never update this slot value.</span></h5>
+                                <img width="100%" src="images/live-lesson-slot.png">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bundles">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Bundles</b>
+                            </div>
+                            <div class="card-body">
+                                <p>
+                                    This functionality will be used to create and manage bundles of the courses. Suppose you want to provide combo of particular category or subject based courses to users in discounted price, then this is the best choice for you.</p>
+                                <p>It looks simliar to Course creating and you can add multiple course in bundles, you can also set custom price for the course, set the featured image and also add description about the bundle</p>
+                                <p>Once you publish the bundle user will be able to purchase the courses available in bundle.</p>
+                                <p>Free Bundle feature is also available</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="reports">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Reports</b>
+                            </div>
+                            <div class="card-body">
+                                <p>There are basically two reports available.
+                                </p>
+                                <p><b>Sales Report</b> : Where you can get total sales counting and earning for Courses and Bundles both.                                    </p>
+
+                                <img width="100%" src="images/sales-report.png">
+                                <p class="mt-4"><b>Students Report</b> : Where you can find list of course in which how many students are enrolled and how many of them have completed the course                                    </p>
+
+                                <img width="100%" src="images/student-report.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="site_management">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Site Management</b>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-0">This is one of the most important menus. Your entire LMS can be
+                                    customised from here. It has following submenus.</p>
+                                <ol class="font-weight-bold pl-3">
+                                    <li>Pages Manager</li>
+                                    <li>Blog</li>
+                                    <li>Reasons</li>
+                                    <li>Menu Manager</li>
+                                    <li>Hero Slider</li>
+                                    <li>Sponsors</li>
+                                    <li>Testimonials</li>
+                                    <li>FAQs (Frequently Asked Questions)</li>
+                                    <li>Contact</li>
+                                    <li>Newsletter Configuration</li>
+                                    <li>Footer</li>
+                                    <li>Sitemap</li>
+                                </ol>
+                                <hr>
+                                <h4>1. Pages Manager</h4>
+                                <p>This is custom page creator for the theme. You can add, edit, update and delete
+                                    custom pages. It will be useful when you want to add some pages like: privacy
+                                    policy, terms and conditions etc.<br>
+                                    You can also utilise this pages to display their link in navbar menu (Top Menu). You
+                                    will see list of all custom pages in <a href="#menu_manager"><b>Menu Manager</b></a>
+                                </p>
+                                <p>You can add <b>Featured Image</b> and enable/disable <b>Sidebar</b>. Besides this you
+                                    also get <b>Published</b> option. So if this checkbox is checked; then it will be
+                                    displayed in frontend or listed for menu. For making it SEO friendly we have added
+                                    special inputs for <code>Meta Title</code>, <code>Meta Description</code>, <code>Meta
+                                        Keywords</code> for the page.</p>
+                                <hr>
+                                <h4>2. Blog</h4>
+                                <p>This is additional feature you can use this theme for blogging as well. Create, edit,
+                                    update, delete blog with this Blog Manager. Including rich text editor, Featured
+                                    Image as well as custom Meta Tags inputs for SEO friendly blogging. You can utilise
+                                    categories to categorize your blogs according to your blog niche. In frontend user
+                                    will be able to share it and can add comments as well.</p>
+                                <hr>
+                                <h4>3. Reasons</h4>
+                                <p>This CRUD will be used to show as a slider in different layouts of Homepage. To
+                                    create reason you will be required to add Title, icon and content. It will look like
+                                    this in homepage :</p>
+                                <img width="100%" src="images/reasons.jpg">
+                                <hr>
+                                <div id="menu_manager">
+                                    <h4>4. Menu Manager</h4>
+                                    <p>Fully featured menu manager like wordpress. Add custom links and custom pages as
+                                        Menu. Create multiple menus and set it as Top Menu. Draggable menu structure for
+                                        sorting. Custom labels and links. We have added default <code>nav-menu</code>
+                                        with the theme. You can customise it according to your requirement.</p>
+                                    <p>Menu translation feature is also available. Once you add menu here in english. Go to <code>Translation Manager</code> and select <code>Custom Menu</code> group. Your added menus will be added in your default translation. Now you can add here menu translation for your system language. Once you've added all the translation click on <b>Publish</b> button.</p>
+                                    <img width="100%" src="images/menu-manager.png">
+                                </div>
+
+                                <hr>
+                                <h4>5. Hero Slider</h4>
+                                <p>Customizable slider is one of the unique feature we provide for this theme. You can
+                                    create, edit, update and delete as many slides as you want and add various widgets
+                                    to it. You can add Buttons, Search box, Countdown timer etc.</p>
+                                <p>Here is the picture of a slide from Homepage Slider</p>
+                                <img width="100%" src="images/hero-slider.png">
+                                <hr>
+                                <h4>6. Sponsors</h4>
+                                <p>Dynamic sponsors list helps you to add custom sponsors to the theme list. All you
+                                    will need is Name, Link of sponsor website or profile and a logo of the sponsor. You
+                                    can create, edit, update, delete all sponsors. Here is how it is displayed on
+                                    homepage.</p>
+                                <img width="100%" src="images/sponsors.jpg">
+                                <hr>
+                                <h4>7. Testimonials</h4>
+                                <p>Dynamic CRUD to display on homepage. Testimonials are generally used to show customer
+                                    review or message to public. It maybe about performance or services. So instead of
+                                    choosing from other people you can write your own testimonials and it will be
+                                    displayed in homepage. All you need to do is add name, occupation and content from
+                                    backend. And there you Go! </p>
+                                <p>As this is fully dynamic you can add,edit,delete as many as you want. Here is a
+                                    picture how it will be displayed in homepage. (It may be different according to
+                                    theme layout chosen from the backend)</p>
+                                <img width="100%" src="images/testimonials.png">
+                                <hr>
+                                <h4>8. FAQs (Frequently Asked Questions)</h4>
+                                <p>This plays very important role for users when they have any doubts. It is your
+                                    responsibility to sort out all the doubts of users. So you will need to prepare list
+                                    of common doubts and present it as a <b>FAQ</b>. So other user can easily access it
+                                    and clear their doubts faster. For that purpose we are presenting you dynamic CRUD
+                                    for <b>FAQs.</b></p>
+                                <p>Yes, you can add as many questions and answers as you want and it will be displayed
+                                    in a separate page. You can even categorize them, so that user can filter it out
+                                    according to their requirement. You can create, edit, delete FAQ from backend and it
+                                    will be displayed to frontend. All you need to create FAQ is to add category,
+                                    question and answer. That's it! and now your FAQ will be displayed in FAQ page.</p>
+                                <p>We also display recent added FAQ with category filter in Homepage according to
+                                    layout. Here is a picture of a Homepage containing FAQ:</p>
+                                <img width="100%" src="images/faq.png">
+                                <hr>
+                                <h4>9. Contact</h4>
+                                <p>Here it is, one of the most advance feature of this LMS. With contact tab you can
+                                    customise contact area of the theme which is displayed in a frontend</p>
+                                <img src="images/contact-frontend.png" width="100%">
+                                <p class="my-3">All the above details are customisable. You can embed your custom map
+                                    with your address as per instructions given. You can also enable/disable all the
+                                    components like short description, primary secondary numbers, address, map etc.</p>
+
+                                <img src="images/contact.png" width="100%">
+                                <hr>
+
+
+                                <h4>10. Newsletter Configuration</h4>
+                                <p>Lead generation is importance for any sort of website. You can configure <b>Sendgrid</b> or <b>Mailchimp</b> whichever is convenient to you.</p>
+                                <img src="images/newsletter-configuration.png" width="100%">
+                                <hr>
+                                <h4>11. Footer</h4>
+                                <p>You can dynamically use footer in the frontend of the website. You can add description, custom links, newsletter form and so on.</p>
+                                <img src="images/footer.png" width="100%">
+                                <hr>
+                                <h4>12. Sitemap</h4>
+                                <p>You can generate sitemap for blog, bundles and courses. It is good for SEO purpose. You can auto generate sitemap if you follow guidelines. And you can also specify number of records per sitemap file</p>
+                                <img src="images/sitemap.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="messaging">
+                        <div class="card">
+                            <div class="card-header">
+                                <b>Messaging</b>
+                            </div>
+                            <div class="card-body">
+                                <p>This tab is located in dashboard. It is provided to make Teacher and Student
+                                    communication more easy and powerful. From dashboard student can search and send
+                                    message to teacher. Where as teacher is allowed to replay them or can contact other
+                                    teachers.</p>
+                                <img width="100%" src="images/messaging.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="leads">
+                        <div class="card">
+                            <div class="card-header"><b>Leads</b></div>
+                            <div class="card-body">
+                                <p>This tab is basically for Administraor only. Here can get list of all the users who
+                                    tried to contact via contact form of the website. Details to be received via contact
+                                    form are as follows:</p>
+                                <ul class="font-weight-bold pl-3">
+                                    <li>Name</li>
+                                    <li>Email</li>
+                                    <li>Phone</li>
+                                    <li>Message</li>
+                                    <li>Time (the time when request was received)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="coupons">
+                        <div class="card">
+                            <div class="card-header"><b>Coupons</b></div>
+                            <div class="card-body">
+                                <p>Creating coupons is very easy in this script. Coupon code should be unique. You have to enable status from coupons list page after creating coupon</p>
+
+                                <img src="images/coupons.png" width="100%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="tax">
+                        <div class="card">
+                            <div class="card-header"><b>Tax</b></div>
+                            <div class="card-body">
+                                <p>Multiple tax can be added. It will be applied to subtotal.</p>
+
+                                <img src="images/tax.png" width="100%">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="payment_request">
+                        <div class="card">
+                            <div class="card-header"><b>Payment Requests</b></div>
+                            <div class="card-body">
+                                <p>List of all the payment requests by the teachers from the amount earned as a commission from courses / bundles sold will be displayed in this menu. Admin can approve / reject the requests. </p>
+                                <p>Teacher Dashboard will have <b>Payments</b> menu, from where they will be able to send requests to admin user. Teachers can also check statistics of commission earned and requested balance in that menu.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="account">
+                        <div class="card">
+                            <div class="card-header"><b>Account</b></div>
+                            <div class="card-body">
+                                <p>This tab is given to user of every role. Here user can manager his personal details
+                                    and make changes to their profile.</p>
+                                <img src="images/account.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="access">
+                        <div class="card">
+                            <div class="card-header"><b>Access</b></div>
+                            <div class="card-body">
+                                <p>Here you can create, manage users and their roles. And you can also assign
+                                    permissions to roles. <br>It has two submenus: <b>User Management</b> and <b>Role
+                                        Management</b></p>
+                                <h4>User Management</h4>
+                                <p>You can create, edit, update and delete users and can also assign them particular
+                                    roles. Besides this you can also give them permission listed in the right
+                                    sidebar.</p>
+                                <h4>Role Management</h4>
+                                <p>Here you can create, edit, updated and delete different roles and associate various
+                                    permissions with it. It necessary to assign permissions according to role. So that
+                                    user with particular role have access to that particular portion only and don't mess
+                                    with other things.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="settings">
+                        <div class="card">
+                            <div class="card-header"><b>Settings</b></div>
+                            <div class="card-body">
+                                <p>This is basically divided into two parts: <b>General Settings</b> and <b>Social
+                                    Login</b></p>
+                                <h4>General Settings</h4>
+                                <p>It consists of five different tabs containing important user interface settings as
+                                    well as mail and payment configurations settings. <b>General, Logos, Layout, Mail
+                                        Configuration, Payment Configuration</b>. Let's understand this one by one.</p>
+                                <img width="100%" src="images/general.png">
+                                <p class="mt-3"><b>App Name</b> is used in official email communication and in various
+                                    components of theme.</p>
+                                <p><b>Font color</b> will directly affect the entire theme components and fonts, It will
+                                    apply selected combination to entire theme and change the look of theme.</p>
+                                <p><b>Counter</b> will be displayed in HomePage layout. You can either use static data
+                                    or the real data from database according to your choice</p>
+                                <img src="images/counter.png">
+                                <p><b>Google Analytics ID</b> helps you keep tracking of your website traffic via Google. Here is  <a target="_blank" class="font-weight-bold font-italic" href="https://support.google.com/analytics/answer/1042508">How to create Google Analytics ID?</a></p>
+                                <p><b>Captcha Status</b> will allow you to avoid spamming in login as well as registration</p>
+                                <p><b>Retest </b> feature will enable - disable retest functionality in Tests</p>
+                                <p><b>Lesson Timer </b> will be displayed before clicking on Next Lesson.</p>
+                                <p><b>Show Offers Page </b> will display link of offer page in bottom footer. The offer page will contain list of <b>Coupons</b></p>
+                                <p class="mb-0"><b>OneSignal Setup</b> will be used to configure push notification in this script.</p>
+                                <ol class="pl-3">
+                                    <li>Create App in OneSignal.</li>
+                                    <li>Generate Code and paste it here.</li>
+                                    <li> Uploaded OneSignal Files in public folder of the script.</li>
+                                    <li>Allow notification to test.</li>
+                                </ol>
+
+
+                                <p><b>TroubleShoot</b> button will clear all the cache of the script and will refresh storage symblic link in public folder.</p>
+                                <hr>
+                                <img src="images/logos.png" width="100%">
+                                <p class="mt-3">If you want to upload yout custom logo then please follow the
+                                    instruction given below each logo. For better results in all the layouts please
+                                    upload all three type of logos as given in snapshot. Populogo will be used in many
+                                    places like login popup and dashboard. Favicon will be used to display in web
+                                    browser as your symbol.</p>
+                                <hr>
+                                <img src="images/layout.png" width="100%">
+                                <p class="mt-3">This is one of the best feature brought to you buy this theme. You can
+                                    select from 4 different layouts and control visibility of the sections are available
+                                    in that layout. You can select layout type as box or wide.</p>
+                                <hr>
+                                <img src="images/mail-configuration.png" width="100%">
+                                <p class="mt-3">This will be used to make email communication working. Because without
+                                    Mail Configuration you will not be able to send or receive email regarding this.
+                                    Example : Forget Password Emails, Leads Emails etc. </p>
+                                <p>You can use any Mail service provider you want. As it is a <b>Laravel Application</b>
+                                    configure and search it according to <b>Laravel setup</b></p>
+                                <hr>
+                                <img src="images/payment-configuration.png" width="100%">
+                                <p class="mt-3">We are presenting you dynamic payment methods for your website. And you can also select currencies from the list in which you will be able to deal the purchases. You can enable/disable payment methods you want to show while user checkout after adding
+                                    item to the cart. The only payment methods enabled in dashboard will be displayed
+                                    while user checks out.</p>
+                                <p><b>STRIPE Payment</b> will directly use credit - debit card for payment. Here is how
+                                    you will get STRIP API Credentials <a class="font-weight-bold font-italic"
+                                                                          target="_blank"
+                                                                          href="https://stripe.com/docs/keys">Click
+                                        Here</a></p>
+                                <p><b>PayPal Payment</b> will redirect to PayPal checkout where user can login with
+                                    their paypal account and make payment. Here is how you will get PayPal API
+                                    Credentials <a class="font-weight-bold font-italic" target="_blank"
+                                                   href="https://developer.paypal.com/developer/applications/">Click
+                                        Here</a></p>
+                                <p><b>Offline Payment</b> will send order email to the admin and he can handle the order
+                                    by making personally contact with buyer. Once transaction is completed admin can
+                                    complete order by visiting <code>Dashboard -> Orders</code> , find that order and
+                                    click on <b>Complete Manually</b> button. Now that course will be displayed in user
+                                    dashboard and invoice will be generated for the user for that order.</p>
+                                <img src="images/language-settings.png" width="100%">
+
+
+                                <p class="mt-3">We are supporting multiple languages for users. Here you can select defaul language for the website and layout for the same. There are two options available for layout: <b>Left to Right</b> and <b>Right to Left</b>. First one is regular layout which we see in normal website, But the Right to Left layout is used with particular languages like Arabic, Urdu etc. There are currently four languages available in Neon LMS : English, Spanish, French and Arabic.</p>
+                                <hr>
+                                <p><b>User Registration Settings</b>
+                                <p>Here you can specify fields to display which will be added in registration form when user signs up. You can ask for specific details from the user from listed in right panel.</p>
+
+                                <img src="images/user-reg-settings.png" width="100%">
+                                <hr>
+                                <p><b>API Clients</b>
+                                <p>Generate and Revoke API Client ID and Client Secret. You can use them to create android apps or Testing API.</p>
+                                <a target="_blank" href="https://documenter.getpostman.com/view/5183624/SW18uZwk?version=latest" class="btn btn-dark  font-weight-bold text-white">Developer Manual <i class="fa fa-arrow-right ml-2"></i></a>
+                                <img class="mt-4" src="images/api-clients.png" width="100%">
+                                <hr>
+
+
+
+
+                                <h4 class="mt-3">Social Login</h4>
+                                <p> We are providing you three most trending social login feature including <b>Facebook,
+                                    Google and Twitter.</b> Only enabled social login provider will be displayed in
+                                    login popup. To configure social login, you need to add Api credentials for
+                                    respective social login provider.</p>
+                                <img src="images/social-login.png" width="100%">
+                                <p class="mt-3">So, now we will tell you how to obtain and configure for each social
+                                    media API credentials.</p>
+                                <h4 class="mt-5">Facebook Social Login</h4>
+                                <ul class="pl-4">
+                                    <li>
+                                        Visit <a target="_blank" href="https://developers.facebook.com/apps/">https://developers.facebook.com/apps</a>
+                                        and Login to your <b>Facebook Account</b>
+                                    </li>
+                                    <li>Now click on <b>Add a New App</b>. A popup will appear.</li>
+                                    <li>Add app <b>Display Name</b> and <b>Contact Email</b>. Then click on <b>Create
+                                        App ID</b> button to create your app
+                                    </li>
+                                    <li>You will be redirected to you app page once you app is created. Now click on
+                                        <img src="images/product-button.png"> which is located on left sidebar.
+                                    </li>
+                                    <li>Find <b>Facebook Login</b> from listed product and click on <b>Set Up</b> button
+                                        once you find it.
+                                    </li>
+                                    <li>Now you will see <b>Facebook Login</b> is added under <img
+                                            src="images/product-button.png">. Now open that dropdown and click on <b>Settings</b>
+                                    </li>
+                                    <li>Scroll to <b>Client OAuth Settings</b>. Copy <b>Redirect URL</b> of
+                                        <b>Facebook</b> from your <b>Social Settings</b> of theme and add this to <b>Valid
+                                            OAuth Redirect URIs</b> in facebook app page. And click on <b>Save
+                                            Changes</b>. It may look like this:
+                                        <img class="my-2" src="images/facebook-redirect-url.png">
+                                    </li>
+                                    <li>Now form left sidebar go to <code>Settings -> Basic</code>. Your screen will
+                                        look like this. Fill following details and click on <b>Save Changes</b>
+                                        <ul class="">
+                                            <li><b>Display Name</b> : Enter you App name</li>
+                                            <li><b>App Domains</b> : Your App URL</li>
+                                            <li><b>Contact Email</b> : Your Contact Email ID</li>
+                                            <li><b>Privacy Policy URL</b> : Your website's Privacy policy page URL</li>
+                                            <li><b>Terms of Service URL</b> : Your website's Terms of Service page URL
+                                            </li>
+                                            <li>APP Icon (if required): You website logo.</li>
+                                        </ul>
+                                        <p>Now click on <b>Save Changes</b> button and you are good to go. </p>
+                                        <p>Copy <b>APP ID</b> and paste it to <b>Client ID</b>. Copy <b>App Secret</b>
+                                            and paste it to <b>Client Secret</b> in <code>Social Login settings</code>
+                                        <p><b>NOTE:</b> Facebook login will work on <b>HTTPS</b> only.</p>
+                                        <img class="my-2" width="100%" src="images/facebook-basic.png">
+                                    </li>
+                                </ul>
+
+                                <h4 class="mt-5">Google Social Login</h4>
+                                <ul class="pl-4">
+                                    <li>First, you need to create a new project at <a target="_blank"
+                                                                                      href="https://console.developers.google.com">https://console.developers.google.com</a>
+                                        <img class="my-2" src="images/google-project.png">
+                                    </li>
+                                    <li>After creating your app successfully, Click credentials in left side navigation
+                                        and select 'OAuth Consent Screen' , fill out the details there.
+                                        <img class="my-2" src="images/google-creds.png">
+                                    </li>
+                                    <li>Now you need create credentials for your app. Click credentials in left side
+                                        navigation and select 'Credentials'. In the dropdown select 'OAuth client ID'
+                                        <img class="my-2" src="images/google-oauth.png">
+                                    </li>
+                                    <li>In the OAuth client ID screen, select the type of application, give origin and
+                                        callback URLs,
+                                        Copy <b>Redirect URL</b> from your website and paste to <b>Authorized redirect
+                                            URIS in OAuth Client ID screen.</b> Now click on create.
+                                    </li>
+                                    <li>You also need to enable Google + Api too. You will see a 'ENABLE API' button,
+                                        click it.
+                                        <img class="my-2" src="images/google-enable-api.png">
+                                    </li>
+                                    <li>Select Google + in Social API's.</li>
+                                    <li>Now you will get the Client ID and Client secret in the credentials page.
+                                        <img class="my-2" src="images/google-api-creds.png">
+
+                                    </li>
+                                    <li>Now add these credentials to you website.</li>
+                                </ul>
+                                <h4 class="mt-5">Twitter Social Login</h4>
+                                <ul class="pl-4">
+                                    <li>Register a new app at <a href="https://apps.twitter.com">https://apps.twitter.com</a>
+
+                                        <img src="images/twitter-create-app.png">
+                                    </li>
+                                    <li><p>After creating your app, click 'Keys and Access Tokens' tab at the top to get
+                                        Client ID(App ID) and Client Secret(App Secret). Add this credentials to the
+                                        website and you are good to go.</p>
+                                        <img src="images/twitter-creds.png">
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div id="debug_site">
+                        <div class="card">
+                            <div class="card-header"><b>Debug Site</b></div>
+                            <div class="card-body">
+                                <p>This is site debugger tool. Where you can watch out current condition of your
+                                    website. Like errors, warning alerts and all. Besides this you can also check and
+                                    download errors logs. And can also view it in details.</p>
+                                <img src="images/debug.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="translation_manager">
+                        <div class="card">
+                            <div class="card-header"><b>Translation Manager</b></div>
+                            <div class="card-body">
+                                <p>It helps you in managing locales of the website. Here you can see list off all the
+                                    languages file. You can edit, update and delete them. You can also create new
+                                    locale. Means you can add new language. We are giving by default three locales with
+                                    theme; <b>English, Spanish and French</b>. You can also update those files if you
+                                    think this is not a right translation.</p>
+                                <img src="images/translation-manager.png" width="100%">
+
+                                <p class="mt-3">If you click on <b>Choose groups</b> and it does not show any option.
+                                    Then click on <b>Import Groups</b> button. By that all the locale files will be
+                                    added to the website and you will see list of files in choose group. If you select a
+                                    group from the list, you will be redirected to view/edit page</p>
+                                <p>If you want to update any of the language translation, just click on it and an editor
+                                    will be opened. Edit it and click on save. Now If you want to publish this change
+                                    then click on <b>Publish Translations</b> from above area and your translation would
+                                    be applied to your live site.</p>
+                                <img src="images/translation-manager-view.png" width="100%">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="backup">
+                        <div class="card">
+                            <div class="card-header"><b>Backup</b></div>
+                            <div class="card-body">
+                                <p> For data security <b>Backup</b> plays important role. Suppose if there is any
+                                    consequences in your website and you lose your data, then this backup will help you.
+                                    We have added <b>DropBox</b> backup feature. All you need to do is follow simple
+                                    steps; your backup will be automatically taken according to your choice and will be
+                                    saved in your dropbox account.</p>
+                                <img src="images/backup.png" width="100%">
+                                <p class="mt-2">You can schedule backup in <b>daily,weekly and monthly</b> basis.
+                                    Besides this you can also specify that what do you want to backup. Like, only
+                                    database, database - storage files (it includes all the images data of users) and
+                                    database - application files (entire website data) </p>
+                                <p>You will be notified every time on your email when your backup is generated and
+                                    saved. You need to add your email id here to receive backup notification. You can
+                                    also <b>Enable / Disable</b> backup as if you want to backup your application or
+                                    not.</p>
+                                <p>Here are the steps you need to follow in order to obtain <b>App Token</b> and <b>App
+                                    Secret</b> from DropBox to backup your application.</p>
+                                <ul class="pl-3">
+                                    <li><p>Create a <a target="_blank"
+                                                       href="https://www.dropbox.com/developers/apps/create">Dropbox API
+                                        App</a></p>
+                                        <img src="images/dropbox.png">
+                                    </li>
+                                    <li>Make sure you generate an access token. Save the access token and secret add
+                                        this token in your application. Generating an access token will create a folder
+                                        Apps in your Dropbox folder. This is where your backups will be saved.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="update">
+                        <div class="card">
+                            <div class="card-header"><b>Update</b></div>
+                            <div class="card-body">
+                                <p> This feature is very precious but before using it make sure you've already backup
+                                    your application. So that your data stay secure. Because when an update is applied,
+                                    all your custom changes in application files will be lost and your current
+                                    application files will be replaced with new files.</p>
+
+                                <img src="images/update.png" width="100%">
+
+                                <p class="mt-2">If you have made changes in application files and want to update theme,
+                                    then unzip update.zip in your local and compare files, update or make changes in
+                                    your files one by one. So that you can have your custom files as well as new update
+                                    changes.</p>
+
+                                <p>We strongly recommend you to update theme by version number.
+                                    Example : update_v1.zip, update_v2.zip. Please do not jump version number. If your
+                                    version number is 1 and you want to update it, then update to version 2. Do not
+                                    directly update to version 3.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="credits">
+                        <div class="card">
+                            <div class="card-header"><b>Credits</b></div>
+                            <div class="card-body">
+                                <ul class="common">
+                                    <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
+                                    <li><a href="https://jquery.com/">Jquery</a></li>
+                                    <li><a href="http://fortawesome.github.io/Font-Awesome/">Font-Awesome</a></li>
+                                    <li><a href="http://tristanedwards.me/sweetalert">Sweet-Alert</a></li>
+                                    <li><a href="http://arshaw.com/fullcalendar/">Full Calendar</a></li>
+                                    <li><a href="http://jdewit.github.com/bootstrap-timepicker">Bootstrap-timepicker</a>
+                                    </li>
+                                    <li><a href="http://www.eyecon.ro/bootstrap-colorpicker">Bootstrap Colorpicker</a>
+                                    </li>
+                                    <li><a href="https://select2.github.io/">Select2</a></li>
+                                    <li><a href="https://www.datatables.net">Datatables</a></li>
+                                    <li><a href="http://morrisjs.github.io/morris.js/">Morris</a></li>
+                                    <li><a href="http://omnipotent.net/jquery.sparkline/">Sparkline</a></li>
+                                    <li><a href="https://hpneo.github.io/gmaps/">Gmaps</a></li>
+                                    <li><a href="https://github.com/silviomoreto/bootstrap-select"> Bootstrap select</a>
+                                    </li>
+                                    <li><a href="https://github.com/wenzhixin/bootstrap-table-examples"> Bootstrap
+                                        tables</a>
+                                    </li>
+                                    <li><a href="https://github.com/laravel/framework"> Laravel Framework</a></li>
+                                    <li><a href="https://github.com/spatie/laravel-activitylog"> Laravel Activity
+                                        Log</a></li>
+                                    <li><a href="https://github.com/spatie/laravel-permission"> Laravel Permissions</a>
+                                    </li>
+                                    <li><a href="https://github.com/ARCANEDEV/LogViewer"> Log Viewer</a></li>
+                                    <li><a href="https://github.com/laravel/socialite"> Socialite</a></li>
+                                    <li><a href="https://github.com/barryvdh/laravel-translation-manager">Translation
+                                        Manager</a></li>
+                                    <li><a href="https://github.com/ConsoleTVs/Invoices">Invoice Generator</a></li>
+                                    <li><a href="https://github.com/darryldecode/laravelshoppingcart">Laravel Cart</a>
+                                    </li>
+                                    <li><a href="https://github.com/Team-Tea-Time/laravel-forum">Chatter Forums</a></li>
+                                    <li><a href="https://github.com/gerardojbaez/messenger">Gerardojbaez messenger</a>
+                                    </li>
+                                    <!--<li><a href="https://github.com/harimayco/wmenu-builder">Harimayco menu-builder</a>
+                                    </li> -->
+                                    <li><a href="https://github.com/spatie/laravel-newsletter">Laravel Newsletter</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--content-header-->
+            </div><!--animated-->
+        </div><!--container-fluid-->
+    </main><!--main-->
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, Bootstrap, then CoreUI  -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@coreui/coreui/dist/js/coreui.min.js"></script>
+<script>
+    $(document).on('click', '.nav-link, .link', function (e) {
+        $('.nav-link').removeClass('active');
+        $(this).addClass('active')
+        var target = $($(this).attr('href'))
+        $('html, body').animate({
+            scrollTop: target.offset().top - 76
+        }, 10);
+    });
+</script>
+</body>
+</html>
