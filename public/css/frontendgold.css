@@ -157,8 +157,7 @@
   }
 
   .section-title-2-gold h2 {
-    position: relative;
-    left: 20px;
+    text-align: center;
   }
 
   .col-md-9,
@@ -649,76 +648,63 @@
   fill: #1a1a1a;
   color: #ffffff;
   }
-  
-  /* Media Queries */
-  @media (max-width: 1200px) {
-  .content-form-gold {
-  width: 100%;
-  }
-  }
-  
+
   @media (max-width: 768px) {
-  .content-form-gold {
-  height: auto;
-  }
+    .content-form-gold {
+      width: 100%;
+    }
   
-  .form-price-gold h2 {
-  font-size: 150px;
-  }
+    .form-button-gold {
+      left: 5%;
+      width: 90%;
+    }
   
-  .form-2-gold h2 {
-  font-size: 40px;
-  }
+    .form-button-gold2 {
+      left: 5%;
+      width: 90%;
+      height: 73px;
+    }
+
+    
+
+    .form-button-gold2 span {
+      font-size: 17px;
+      margin: 0;
+    }
   
-  .form-info-gold h2 {
-  font-size: 25px;
-  }
+    .form-price-gold h2 {
+      font-size: 115px;
+    }
   
-  .form-button-gold, .form-button-gold2 {
+    .form-x-gold {
+      left: 15%;
+      top: 35%;
+    }
   
-  width: 90%;
-  font-size: 18px;
-  }
-  }
+    .form-x-gold h2 {
+      font-size: 33px;
+    }
   
-  @media (max-width: 480px) {
-  .content-form-gold {
-  height: 100%;
-  width: 100%;
-  }
+    .form-2-gold h2 {
+      top: 70px;
+      left: 55px;
+      font-size: 45px;
+    }
   
-  .form-title-gold h2 {
-  font-size: 35px;
-  white-space: nowrap;
-  }
+    .container-form-button {
+      position: relative !important;
+      top: 65% !important;
+    }
   
-  .form-x-gold h2 {
-  font-size: 40px;
-  position: relative;
-  bottom: 200px
-  }
   
-  .form-price-gold h2 {
-  font-size: 100px;
-  }
-  
-  .form-2-gold h2 {
-  font-size: 30px;
-  position: relative;
-  left: 50px;
-  top: 30px;
-  }
-  
-  .form-info-gold h2 {
-  font-size: 20px;
-  }
-  
-  .form-button-gold, .form-button-gold2 {
-  width: 70%;
-  font-size: 16px;
+    .form-button-gold span {
+      font-size: 17px;
+      margin: 0;
+    }
+    
   }
 
-  }
+
 /*******************************************************
 
           OF COURSE
@@ -797,6 +783,32 @@
   text-align: left;
   width: 100vh;
 }
+
+@media (max-width: 768px) {
+  .titlecourse-gold {
+    position: relative;
+    top: 70px;
+  }
+
+  .modules-gold {
+    margin-left: 250px;
+  }
+
+  .modules-gold ul {
+  }
+  
+  .submodules ul.open {
+    margin-left: 0;
+  }
+
+  .ofcourse-gold {
+    height: 80vh;
+  }
+
+}
+
+
+
 
 /*******************************************************
 

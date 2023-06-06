@@ -2658,7 +2658,7 @@ button.alt-menu-btn.float-left {
   font-family: 'Abel', sans-serif;
 }
 .section-title-2-galaxyy h2{
-  position: absolute;
+  position: relative;
   left: 20%;
   top: 0%;
   font-size: 2.7em;
@@ -2697,6 +2697,18 @@ button.alt-menu-btn.float-left {
 .about-text-item-galaxy .section-title-2-galaxy {
   margin-bottom: 65px;
 }
+
+@media (max-width: 768px) {
+  .section-title-2-galaxyy h2 {
+    white-space: normal;
+    left: 0;
+    text-align: center;
+  }
+
+
+}
+
+
 
 /*******************************************************
 
@@ -3162,6 +3174,62 @@ button.alt-menu-btn.float-left {
 
 }
 
+@media (max-width: 768px) {
+  .content-form {
+    width: 100%;
+  }
+
+  .form-button {
+    left: 5%;
+    width: 90%;
+  }
+
+  .form-button2 {
+    left: 10%;
+    width: 79%;
+    height: 73px;
+    top: 130px;
+  }
+
+  .form-button2 span {
+    top: 0;
+    font-size: 17px;
+    margin: 0;
+  }
+
+  .form-price h2 {
+    font-size: 115px;
+  }
+
+  .form-x {
+    left: 15%;
+    top: 35%;
+  }
+
+  .form-x h2 {
+    font-size: 33px;
+  }
+
+  .form-2 h2 {
+    top: 70px;
+    left: 55px;
+    font-size: 45px;
+  }
+
+  .container-form-button {
+    position: relative !important;
+    top: 65% !important;
+  }
+
+
+  .form-button span {
+    top: 0;
+    font-size: 17px;
+    margin: 0;
+  }
+  
+}
+
 /*******************************************************
 
           OF COURSE
@@ -3246,6 +3314,21 @@ button.alt-menu-btn.float-left {
   transition: all 1s ease-out;
 }
 
+
+@media (max-width: 768px) {
+  .titlecourse-galaxy {
+    position: relative;
+    top: 70px;
+  }
+
+  .modules-galaxy {
+    margin-left: 235px;
+  }
+
+  .submodules ul.open {
+    margin-left: 0;
+  }
+}
 
 
 /*******************************************************
@@ -7078,9 +7161,6 @@ ul.product-tab li.active:after {
   transition: 0.5s;
 }
 
-.blog-details-content .author-comment:hover {
-  box-shadow: rgb(0, 0, 0) 0px 30px 55px, rgb(0, 0, 0) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-}
 
 .blog-details-content .author-comment .author-img {
   height: 50px;
@@ -7102,7 +7182,7 @@ ul.product-tab li.active:after {
 
 .blog-details-content .author-comment .author-designation-comment p {
   font-size: 16px;
-  color: var (--cor-cinza);
+  color: var(--cor-cinza);
   font-weight: 400;
   margin-top: 5px;
   margin-bottom: 0;
@@ -9304,7 +9384,7 @@ ul.product-tab li.active:after {
   text-transform: uppercase;
   color: #820ad1;
   position: relative;
-  left: 25%;
+  left: 26%;
   font-weight: 700;
   font-size: 35px;
   font-family: criteria cf, Sans-serif;

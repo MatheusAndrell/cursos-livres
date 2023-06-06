@@ -94,7 +94,7 @@
                         </div>
                     </div>
                     @if($contact_data["location_on_map"]["status"] == 1)
-                        <div class="col-md-6">
+                        <div class="col-md-6"> 
                         </div>
                     @endif
                 @else

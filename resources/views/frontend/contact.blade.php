@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-md-4">
                             <div class="contact-info">
-                                <input class="email" name="email" type="email" placeholder="@lang('labels.frontend.contact.your_email')">
+                                <input class="emaill" name="email" type="email" placeholder="@lang('labels.frontend.contact.your_email')">
                                 @if($errors->has('email'))
                                     <span class="help-block text-danger">{{$errors->first('email')}}</span>
                                 @endif

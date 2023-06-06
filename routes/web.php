@@ -286,3 +286,4 @@ Route::get('/leaf-package/courses', function () {
 Route::get('/obtenha-business', 'FrontendController@obtenhaBusiness')->name('obtenha.business');
 Route::get('/saiba-mais', 'FrontendController@saibaMais')->name('saiba.mais');
 Route::get('/seja-instrutor', 'FrontendController@saibaMais')->name('seja.instrutor');
+Route::get('/saiba-profissoes', 'FrontendController@saibaMais')->name('saiba.profissoes');

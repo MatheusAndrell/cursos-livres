@@ -39,7 +39,6 @@
                         <div class="about-text-item-galaxy">
                             <div class="section-title-2-galaxyy  headline text-left">
                                 <h2>{{ $page->title }}</h2>
-                            </div>
                             {!! $page->content !!}
                         </div>
                         <!-- /about-text -->
@@ -176,7 +175,7 @@
                     <h2> ,99 </h2>
                 </div>
                 <div class="form-info">
-                    <h2> ou R$9.999 à vista </h2>
+                    <h2> ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista </h2>
                 </div>
                 <div class="container-form-button">
                     <form action="{{ route('cart.checkout') }}" method="POST">

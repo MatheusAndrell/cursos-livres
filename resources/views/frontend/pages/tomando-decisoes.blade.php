@@ -14,8 +14,8 @@
     <section class="sectionnav">
         <nav class="navgold">
             <a class="agold" href="{{ url('/') }}">Home</a>
-            <a class="agold" href="{{ url('/') }}">Vitrine</a>
-            <a class="agold" href="#contact">Contato</a>
+            <a class="agold" href="{{ url('bundles') }}">Vitrine</a>
+            <a class="agold" href="{{ url('contact') }}">Contato</a>
         </nav>
     </section>
     <!-- End navbar
@@ -24,7 +24,11 @@
     <!-- Start of banner
                                  ============================================= -->
     <section class="gold">
-        <img src="/img/gold.png" id="mountains_front" class="responsive-image">
+        @if($page->image != "")
+            <div class="responsive-image">
+                <img src="{{asset('storage/uploads/'.$page->image)}}" alt="">
+            </div>
+    @endif
     </section>
 
     <!-- End of banner
@@ -182,7 +186,7 @@
                     <h2>,99</h2>
                 </div>
                 <div class="form-info-gold">
-                    <h2>ou R$9.999 à vista</h2>
+                    <h2>ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista</h2>
                 </div>
                 <a href="{{ route('cart.index') }}" role="button-gold">
                     <div class="form-button-gold">

@@ -706,7 +706,8 @@
 	}
 
 	.side-bar {
-
+		position: relative;
+		bottom: 235vh;
 		margin-top: 20px;
 
 	}

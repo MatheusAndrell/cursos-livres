@@ -53,13 +53,13 @@
             <h3>Cursos</h3>
             <span>Aprofunde seus conhecimentos em uma área específica ou aprenda a usar determinadas ferramentas em nível
                 avançado. Adequado para iniciantes e futuros especialistas.</span>
-            <button class="btn-card1">Saiba Mais</button>
+            <a href="{{ ('bundles') }}"> <button class="btn-card1">Saiba Mais</button> </a>
         </section>
         <section class="card-contact shop-contact">
             <h3>Profissões</h3>
             <span>Prepare-se para começar um trabalho totalmente novo. Adequado para quem quer mudar de vida, mas ainda não
                 tem habilidades na área desejada.</span>
-            <button class="button-card2">Saiba Mais</button>
+                <a href="{{ route('saiba.profissoes') }}"> <button class="btn-card2">Saiba Mais</button> </a>
         </section>
     </main>
 

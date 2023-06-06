@@ -133,7 +133,7 @@ return array (
       ),
       'orders' => 
       array (
-        'title' => 'Ordens',
+        'title' => 'Pedidos',
       ),
       'pages' => 
       array (

@@ -189,7 +189,7 @@
                     <h2> ,99 </h2>
                 </div>
                 <div class="form-info-platinum">
-                    <h2> ou R$9.999 à vista </h2>
+                    <h2> ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista </h2>
                 </div>
 
                 <div class="container-form-button">

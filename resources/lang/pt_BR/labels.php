@@ -345,7 +345,7 @@ return array (
       'no_data' => 'Sem dados disponíveis',
       'ordered_by' => 'Ordenado por',
       'pending' => 'Pendente',
-      'pending_orders' => 'Ordens pendentes',
+      'pending_orders' => 'Pedidos pendentes',
       'recent_contact_requests' => 'Pedidos de contato recentes',
       'recent_contacts' => 'Contatos recentes',
       'recent_messages' => 'Mensagens recentes',
