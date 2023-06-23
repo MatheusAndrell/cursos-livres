@@ -121,6 +121,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('video/progress', 'LessonsController@videoProgress')->name('update.videos.progress');
     Route::post('lesson/progress', 'LessonsController@courseProgress')->name('update.course.progress');
     Route::post('lesson/book-slot', 'LessonsController@bookSlot')->name('lessons.course.book-slot');
+    
 });
 
 Route::get('/search', [HomeController::class, 'searchCourse'])->name('search');

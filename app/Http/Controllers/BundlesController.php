@@ -81,10 +81,12 @@ class BundlesController extends Controller
             $bundle_rating = $bundle->reviews->avg('rating');
             $total_ratings = $bundle->reviews()->where('rating', '!=', "")->get()->count();
         }
-        $courses = $bundle->courses()->orderby('id','asc')->get();
+        $courses = $bundle->courses()->orderby('id','asc')->first();
+
+        $lessons = $courses->lessons->sortByDesc('position');
 
         $bundleInPlan = courseOrBundlePlanExits('',$bundle->id);
-        return view( $this->path.'.bundles.show', compact('bundle', 'purchased_bundle', 'recent_news', 'bundle_rating','bundle_rating','courses','total_ratings','is_reviewed','checkSubcribePlan','bundleInPlan'));
+        return view( $this->path.'.bundles.show', compact('lessons', 'bundle', 'purchased_bundle', 'recent_news', 'bundle_rating','bundle_rating','courses','total_ratings','is_reviewed','checkSubcribePlan','bundleInPlan'));
     }
 
 
@@ -174,3 +176,4 @@ class BundlesController extends Controller
         return abort(404);
     }
 }
+

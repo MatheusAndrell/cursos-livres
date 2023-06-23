@@ -203,6 +203,8 @@ a:hover {
   box-shadow: none;
 }
 
+
+
 .relative-position {
   position: relative;
 }
@@ -8478,6 +8480,7 @@ ul.product-tab li.active:after {
   box-sizing: border-box;
   position: relative;
   bottom: 50px;
+  color: white;
 }
 
 
@@ -9233,7 +9236,7 @@ ul.product-tab li.active:after {
 
 .ofcourse-platinum {
   background-color: #f8f8f8;
-  height: 114vh;
+  height: auto;
 }
 
 .titlecourse-platinum {
@@ -9319,6 +9322,14 @@ ul.product-tab li.active:after {
 
 .submodules li.open ul {
   max-height: 200px;
+}
+
+.module-link {
+  color: black;
+}
+
+.module-link:hover {
+  color: black;
 }
 
 @media (max-width: 768px) {

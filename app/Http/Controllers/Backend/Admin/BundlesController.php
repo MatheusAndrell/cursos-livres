@@ -232,7 +232,6 @@ class BundlesController extends Controller
             $bundle->save();
         }
 
-
         if ((int)$request->price == 0) {
             $bundle->price = null;
             $bundle->save();
@@ -240,7 +239,6 @@ class BundlesController extends Controller
 
         $courses = array_filter((array)$request->input('courses'));
         $bundle->courses()->sync($courses);
-
 
         return redirect()->route('admin.bundles.index')->withFlashSuccess(trans('alerts.backend.general.updated'));
     }

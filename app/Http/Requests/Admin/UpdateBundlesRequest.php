@@ -25,6 +25,18 @@ class UpdateBundlesRequest extends FormRequest
         return [
             'courses' => 'required',
             'title' => 'required',
+            'titulotendencia1' => 'required|string|max:100',
+            'titulotendencia2' => 'required|string|max:100',
+            'titulotendencia3' => 'required|string|max:100',
+            'tendencia1' => 'required|string|max:1000',
+            'tendencia2' => 'required|string|max:1000',
+            'tendencia3' => 'required|string|max:1000',
+            'titulocard1' => 'required|string|max:100',
+            'titulocard2' => 'required|string|max:100',
+            'titulocard3' => 'required|string|max:100',
+            'card1' => 'required|string|max:1000',
+            'card2' => 'required|string|max:1000',
+            'card3' => 'required|string|max:1000',            
             'start_date' => 'nullable|date_format:'.config('app.date_format'),
         ];
     }

@@ -24,7 +24,7 @@
             @yield('meta')
             <link rel="stylesheet" href="{{asset('css/select2.min.css')}}">
             <link rel="stylesheet" href="{{asset('assets/css/fontawesome-all.css')}}">
-
+            <link rel="stylesheet" href="/css/backend.css">
             <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
             <link rel="stylesheet"

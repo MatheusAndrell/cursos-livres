@@ -373,7 +373,6 @@
             {!! config('custom_js') !!}
         </script>
     @endif
-    <script src="{{ asset('js/barra.js') }}"></script>
 </body>
 
 </html>

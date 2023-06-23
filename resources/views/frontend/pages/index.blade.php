@@ -43,7 +43,7 @@
                     <div class="about-us-content-item">
                         @if($page->image != "")
                         <div class="about-gallery w-100 text-center">
-                            <div class="about-gallery-img d-inline-block float-none">
+                            <div class="ab  out-gallery-img d-inline-block float-none">
                                 <img src="{{asset('storage/uploads/'.$page->image)}}" alt="">
                             </div>
                         </div>

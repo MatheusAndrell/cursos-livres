@@ -26,7 +26,7 @@
                                     @foreach ($bundles as $bundle)
                                         <div class="category-item">
                                             <div class="best-course-pic-text-vitrine relative-position-vitrine">
-                                                <a href="{{route('courses.category',['category'=>$bundle->category->slug])}}">
+                                                <a href="{{ route('bundles.show', [$bundle->slug]) }}">
                                                     <div class="best-course-pic-vitrine relative-position-vitrine"
                                                         @if ($bundle->course_image != '') style="background-image: url('{{ asset('storage/uploads/' . $bundle->course_image) }}')" @endif>
                                                         <div class="blakish-overlay"></div>

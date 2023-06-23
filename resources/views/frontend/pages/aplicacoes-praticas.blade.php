@@ -11,7 +11,7 @@
 
 
     <!-- Start of banner
-                                                             ============================================= -->
+                                                                 ============================================= -->
 
     <div class="platinum">
         @if ($page->image != '')
@@ -34,10 +34,10 @@
         </div>
     </a>
     <!-- End of banner
-                                                            ============================================= -->
+                                                                ============================================= -->
 
     <!-- Start of about-page section
-                                                            ============================================= -->
+                                                                ============================================= -->
     <section id="about-page" class="about-page-section-platinum">
         <div class="container-platinum">
             <div class="row">
@@ -62,9 +62,9 @@
         </div>
     </section>
     <!-- End of about-page section
-                                                                    ============================================= -->
+                                                                        ============================================= -->
     <!-- Start of container-card
-                                                                    ============================================= -->
+                                                                        ============================================= -->
     <section>
         <div class="container-card-platinum stars-platinum">
             <div class="card-platinum">
@@ -121,9 +121,9 @@
         </div>
     </section>
     <!-- End of container-card
-                                                                ============================================= -->
+                                                                    ============================================= -->
     <!-- Start of element-section
-                                                                ============================================= -->
+                                                                    ============================================= -->
     <section class="element-section-platinum">
         <div class="element-platinum">
             <div class="title-element-platinum">
@@ -170,9 +170,9 @@
             </div>
     </section>
     <!-- End of element-section
-                                                               ============================================= -->
+                                                                   ============================================= -->
     <!-- Start of subscribe
-                                                               ============================================= -->
+                                                                   ============================================= -->
     <section class="container-form-platinum">
         <section>
             <div id="teste" class="content-form-platinum">
@@ -183,13 +183,14 @@
                     <h2> 12x </h2>
                 </div>
                 <div class="form-price-platinum">
-                    <h2> 999 </h2>
+                    <h2> {{ round($bundle->price / 12) }} </h2>
                 </div>
                 <div class="form-2-platinum">
-                    <h2> ,99 </h2>
+                    <h2> ,{{ str_pad(round(($bundle->price / 12 - floor($bundle->price / 12)) * 100), 2, '0', STR_PAD_LEFT) }}
+                    </h2>
                 </div>
                 <div class="form-info-platinum">
-                    <h2> ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista </h2>
+                    <h2> ou {{ $appCurrency['symbol'] . ' ' . $bundle->price }} à vista </h2>
                 </div>
 
                 <div class="container-form-button">
@@ -225,9 +226,9 @@
         </section>
     </section>
     <!-- End of subscribe
-                                                               ============================================= -->
+                                                                   ============================================= -->
     <!-- Start of course
-                                                               ============================================= -->
+                                                                   ============================================= -->
     <section class="ofcourse-platinum">
         <div class="titlecourse-platinum">
             <h2> O que você vai aprender?</h2>
@@ -333,10 +334,10 @@
 
 
     <!-- End of course
-                                                             ============================================= -->
+                                                                 ============================================= -->
 
     <!-- Start Contacts
-                                                         ============================================= -->
+                                                             ============================================= -->
     <section class="contact-platinum">
         <h2 class="nt-h2"> Tem alguma dúvida? Fale conosco</h2>
         <div class="formas-contatos">
@@ -406,9 +407,9 @@
     </div>
 
     <!-- End Contacts
-                                                         ============================================= -->
-    <!-- Start Footer
                                                              ============================================= -->
+    <!-- Start Footer
+                                                                 ============================================= -->
     <footer class="platinum-footer">
         <div id="footer_content-platinum">
             <div id="footer_contacts">
@@ -478,4 +479,79 @@
         </div>
     </footer>
     <!-- End Footer
-                                                             ============================================= -->
+                                                                 ============================================= -->
+
+    @if (count($lessons) > 0)
+        @php $count = 0; @endphp
+        @foreach ($lessons as $key => $lesson)
+            @if ($lesson->model && $lesson->model->published == 1)
+                @php $count++ @endphp
+
+                <div class="panel position-relative">
+                    @if (auth()->check())
+                        {{-- @if (in_array($lesson->model->id, $completed_lessons))
+                                                                                 <div class="position-absolute" style="right: 0;top:0px">
+                                                                                     <span class="gradient-bg p-1 text-white font-weight-bold completed course-completed">@lang('labels.frontend.course.completed')</span>
+                                                                                 </div>
+                                                                             @endif --}}
+                    @endif
+                    <div class="panel-title" id="headingOne">
+                        <div class="ac-head">
+                            <button class="btn btn-link collapsed" data-toggle="collapse"
+                                data-target="#collapse{{ $count }}" aria-expanded="false"
+                                aria-controls="collapse{{ $count }}">
+                                <span>{{ sprintf('%02d', $count) }}</span>
+                                {{ $lesson->model->title }}
+                            </button>
+                            @if ($lesson->model_type == 'App\Models\Test')
+                                <div class="leanth-course">
+                                    <span>@lang('labels.frontend.course.test')</span>
+                                </div>
+                            @endif
+                            @if ($lesson->model->live_lesson)
+                                <div class="leanth-course">
+                                    <span>@lang('labels.frontend.course.live_lesson')</span>
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                    <div id="collapse{{ $count }}" class="collapse" aria-labelledby="headingOne"
+                        data-parent="#accordion">
+                        <div class="panel-body">
+                            @if ($lesson->model_type == 'App\Models\Test')
+                                {{ mb_substr($lesson->model->description, 0, 20) . '...' }}
+                            @else
+                                @if ($lesson->model->live_lesson)
+                                    {{ mb_substr($lesson->model->short_text, 0, 20) . '...' }}
+                                @else
+                                    {{ $lesson->model->short_text }}
+                                @endif
+                            @endif
+                            @if ($lesson->model->live_lesson)
+                                <h4>@lang('labels.frontend.course.available_slots')</h4>
+                                @forelse($lesson->model->liveLessonSlots as $slot)
+                                    <div class="card">
+                                        <div class="card-body">
+                                            @lang('labels.frontend.course.date') {{ $slot->start_at->format('d-m-Y h:i A') }}
+                                        </div>
+                                    </div>
+                                @empty
+                                @endforelse
+                            @endif
+                            @if (auth()->check())
+                                @if (in_array($lesson->model->id, $completed_lessons))
+                                    <div>
+                                        <a class="btn btn-warning mt-3"
+                                            href="{{ route('lessons.show', ['course_id' => $lesson->course->id, 'slug' => $lesson->model->slug]) }}">
+                                            <span class=" text-white font-weight-bold ">@lang('labels.frontend.course.go')
+                                                ></span>
+                                        </a>
+                                    </div>
+                                @endif
+                            @endif
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endforeach
+    @endif

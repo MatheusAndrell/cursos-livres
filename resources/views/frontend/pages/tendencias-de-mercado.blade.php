@@ -184,10 +184,10 @@
                     <h2> 12x </h2>
                 </div>
                 <div class="form-price-platinum">
-                    <h2> 999 </h2>
+                    <h2> {{ round($bundle->price/12) }} </h2>
                 </div>
                 <div class="form-2-platinum">
-                    <h2> ,99 </h2>
+                    <h2> ,{{ str_pad(round(($bundle->price/12 - floor($bundle->price/12)) * 100), 2, '0', STR_PAD_LEFT) }} </h2>
                 </div>
                 <div class="form-info-platinum">
                     <h2> ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista </h2>

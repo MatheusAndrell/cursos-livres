@@ -180,14 +180,15 @@
                     <h2>12x</h2>
                 </div>
                 <div class="form-price-gold">
-                    <h2>999</h2>
+                    <h2>{{ round($bundle->price/12) }}</h2>
                 </div>
                 <div class="form-2-gold">
-                    <h2>,99</h2>
+                    <h2>,{{ str_pad(round(($bundle->price/12 - floor($bundle->price/12)) * 100), 2, '0', STR_PAD_LEFT) }}</h2>
                 </div>
-                <div class="form-info-gold">
-                    <h2>ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista</h2>
-                </div>
+                
+                        <div class="form-info-gold">
+                            <h2>ou {{$appCurrency['symbol'].' '. $bundle->price }} à vista</h2>
+                    </div>
                 <a href="{{ route('cart.index') }}" role="button-gold">
                     <div class="form-button-gold">
                         <span><b>QUERO PAGAR COM CARTÃO
